@@ -13,13 +13,24 @@ const cryptoPanel = (props) => {
           variant="top"
           src={props.img}
           style={{
-            width: "15vw",
+            width: "13vw",
             height: "25vh",
             paddingBottom: "5vh",
           }}
         />
 
-        <Card.Title>{props.coin}</Card.Title>
+        <Card.Title style={{
+            fontSize:"1.8rem"
+        }}>{props.coin}</Card.Title>
+
+        <ListGroup>
+          <ListGroup.Item>
+            <Card.Title>Current Price</Card.Title>
+          </ListGroup.Item>
+          <ListGroup.Item>
+            <Card.Text>{props.hour}</Card.Text>
+          </ListGroup.Item>
+        </ListGroup>
 
         <ListGroup>
           <ListGroup.Item>
