@@ -5,6 +5,12 @@ import "bootstrap/dist/js/bootstrap.bundle.min";
 
 import { Card, Container, Row, Col, ListGroup } from "react-bootstrap";
 
+const formatPrice = (price) => {
+
+    return price?.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
+
+}
+
 const cryptoPanel = (props) => {
   return (
     <Card>
@@ -23,30 +29,47 @@ const cryptoPanel = (props) => {
             fontSize:"1.8rem"
         }}>{props.coin}</Card.Title>
 
-        <ListGroup>
-          <ListGroup.Item>
+        <ListGroup style={{
+            paddingBottom:"10px"
+        }}>
+          <ListGroup.Item variant="dark">
             <Card.Title>Current Price</Card.Title>
           </ListGroup.Item>
           <ListGroup.Item>
-            <Card.Text>{props.hour}</Card.Text>
+            <Card.Text>{formatPrice(props.price) + " USD"}</Card.Text>
           </ListGroup.Item>
         </ListGroup>
 
-        <ListGroup>
-          <ListGroup.Item>
+        <ListGroup style={{
+            paddingBottom:"10px"
+        }}>
+          <ListGroup.Item variant="dark">
             <Card.Title>24 Hour Change</Card.Title>
           </ListGroup.Item>
-          <ListGroup.Item>
-            <Card.Text>{props.hour}</Card.Text>
+          <ListGroup.Item variant={props.hourChange > 0 ? 'success' : 'danger'}>
+            <Card.Text>{formatPrice(props.hourChange)}</Card.Text>
           </ListGroup.Item>
         </ListGroup>
 
-        <ListGroup>
-          <ListGroup.Item>
-            <Card.Title>24 Hour Average</Card.Title>
+        <ListGroup style={{
+            paddingBottom:"10px"
+        }}>
+          <ListGroup.Item variant="dark">
+            <Card.Title>24 Hour High</Card.Title>
           </ListGroup.Item>
           <ListGroup.Item>
-            <Card.Text>{props.average}</Card.Text>
+            <Card.Text>{formatPrice(props.hourHigh)}</Card.Text>
+          </ListGroup.Item>
+        </ListGroup>
+
+        <ListGroup style={{
+            paddingBottom:"10px"
+        }}>
+          <ListGroup.Item variant="dark">
+            <Card.Title>24 Hour Low</Card.Title>
+          </ListGroup.Item>
+          <ListGroup.Item>
+            <Card.Text>{formatPrice(props.hourLow)}</Card.Text>
           </ListGroup.Item>
         </ListGroup>
 
