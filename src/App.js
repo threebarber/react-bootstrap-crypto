@@ -30,14 +30,14 @@ const App = () => {
   const [btcData, setBtcData] = useState({});
   const [ethData, setEthData] = useState({});
 
- /* useEffect(() => {
+ useEffect(() => {
     setBtcData(testData[0]);
     setEthData(testData[1]);
     console.log("Set data")
   }, []);
-*/
 
-   
+
+   /*
   useEffect(() => {
     apiHelper
       .getData()
@@ -45,7 +45,7 @@ const App = () => {
         setBtcData(responseData[0])
         setEthData(responseData[1])
       })
-  }, []) 
+  }, []) */
 
 
   let testData = [
@@ -61,7 +61,7 @@ const App = () => {
       "total_volume": 32472091338,
       "high_24h": 23283,
       "low_24h": 22703,
-      "price_change_24h": -416.9013624957079,
+      "price_change_24h": 416.9013624957079,
       "price_change_percentage_24h": -1.79351,
       "market_cap_change_24h": -8517425578.166626,
       "market_cap_change_percentage_24h": -1.90053,

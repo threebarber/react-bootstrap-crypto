@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 // Bootstrap Bundle JS
 import "bootstrap/dist/js/bootstrap.bundle.min";
 
-import { Card, Container, Row, Col, ListGroup } from "react-bootstrap";
+import { Card, Container, Row, Col, ListGroup, Image } from "react-bootstrap";
 
 const formatPrice = (price) => {
 
@@ -15,15 +15,8 @@ const cryptoPanel = (props) => {
   return (
     <Card>
       <Card.Body>
-        <Card.Img
-          variant="top"
-          src={props.img}
-          style={{
-            width: "13vw",
-            height: "25vh",
-            paddingBottom: "5vh",
-          }}
-        />
+
+        <Image src={props.img} responsive="true" />
 
         <Card.Title style={{
             fontSize:"1.8rem"
