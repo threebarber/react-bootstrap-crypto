@@ -11,9 +11,10 @@ const footer = (props) => {
     <p>footer words</p>
 </div>*/
 
-    <Navbar bg="light" variant="light" fixed="bottom" expand="lg">
+    <Navbar bg="dark" variant="dark" fixed="bottom" expand="lg">
       <Container style={{
-        justifyContent: "center"
+        justifyContent: "center",
+        color:"white"
       }}>
         <Nav.Link href="https://github.com/threebarber/react-bootstrap-crypto">
           Github Repo
