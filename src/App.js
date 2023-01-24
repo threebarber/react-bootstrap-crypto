@@ -22,6 +22,7 @@ import React, { useState, useEffect } from "react";
 
 import CryptoPanel from './components/cryptoPanel';
 import MainContainer from "./components/mainContainer";
+import CustomFooter from "./components/footer"
 
 
 
@@ -147,6 +148,8 @@ const App = () => {
       />
       </Col>
     </Row>
+
+    <CustomFooter />
 
     </MainContainer>
   </div>
