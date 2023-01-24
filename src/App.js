@@ -126,7 +126,7 @@ const App = () => {
     <MainContainer>
 
     <Row>
-      <Col>
+      <Col lg="auto">
       <CryptoPanel 
       coin="BTC" 
       img="https://icons.iconarchive.com/icons/cjdowner/cryptocurrency-flat/256/Bitcoin-BTC-icon.png" 
@@ -136,7 +136,7 @@ const App = () => {
       hourLow={btcData.low_24h} />
       </Col>
   
-      <Col>
+      <Col lg="auto">
       <CryptoPanel 
       coin="ETH" 
       img="https://icons.iconarchive.com/icons/cjdowner/cryptocurrency-flat/256/Ethereum-ETH-icon.png" 
