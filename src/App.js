@@ -30,22 +30,22 @@ const App = () => {
   const [btcData, setBtcData] = useState({});
   const [ethData, setEthData] = useState({});
 
-  useEffect(() => {
+ /* useEffect(() => {
     setBtcData(testData[0]);
     setEthData(testData[1]);
     console.log("Set data")
   }, []);
+*/
 
-
-   /*
+   
   useEffect(() => {
     apiHelper
       .getData()
       .then(responseData => {
-        setCryptoData(responseData)
-        console.log(responseData)
+        setBtcData(responseData[0])
+        setEthData(responseData[1])
       })
-  }, []) */
+  }, []) 
 
 
   let testData = [
