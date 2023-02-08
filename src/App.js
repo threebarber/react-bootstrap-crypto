@@ -25,7 +25,6 @@ import MainContainer from "./components/mainContainer";
 import CustomFooter from "./components/footer"
 
 
-
 const App = () => {
 
   const [btcData, setBtcData] = useState({});
@@ -130,7 +129,7 @@ const App = () => {
       <Col lg="auto">
       <CryptoPanel 
       coin="BTC" 
-      img="https://icons.iconarchive.com/icons/cjdowner/cryptocurrency-flat/256/Bitcoin-BTC-icon.png" 
+      img= {require('./btc.png')}  
       price={btcData.current_price}  
       hourChange={btcData.price_change_24h} 
       hourHigh={btcData.high_24h} 
@@ -140,7 +139,7 @@ const App = () => {
       <Col lg="auto">
       <CryptoPanel 
       coin="ETH" 
-      img="https://icons.iconarchive.com/icons/cjdowner/cryptocurrency-flat/256/Ethereum-ETH-icon.png" 
+      img= {require('./eth.png')}  
       price={ethData.current_price} 
       hourChange={ethData.price_change_24h}
       hourHigh={ethData.high_24h}

@@ -16,7 +16,7 @@ const cryptoPanel = (props) => {
     <Card>
       <Card.Body>   
 
-        <Image src={props.img} responsive="true" />
+        <Image className="panel-image" src={props.img} responsive="true" />
 
         <Card.Title style={{
             fontSize:"1.8rem"
