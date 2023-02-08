@@ -14,7 +14,7 @@ const formatPrice = (price) => {
 const cryptoPanel = (props) => {
   return (
     <Card>
-      <Card.Body>
+      <Card.Body>   
 
         <Image src={props.img} responsive="true" />
 

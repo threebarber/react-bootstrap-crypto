@@ -32,6 +32,7 @@
 .Main-Container {
   display:flex;
   margin:25px;
+  padding:20px;
   /*min-height: 92vh;
   min-width: 97vw;*/
   align-content: center;
