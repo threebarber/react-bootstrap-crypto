@@ -37,7 +37,6 @@ const App = () => {
   }, []);*/
 
 
-   
   useEffect(() => {
     apiHelper
       .getData()
@@ -47,7 +46,7 @@ const App = () => {
       })
   }, []) 
 
-
+/*
   let testData = [
     {
       "id": "bitcoin",
@@ -114,6 +113,7 @@ const App = () => {
       "price_change_percentage_7d_in_currency": 6.061415364944603
     }
   ]
+*/
 
   console.log(btcData)
   console.log(typeof btcData)
@@ -129,7 +129,7 @@ const App = () => {
       <Col lg="auto">
       <CryptoPanel 
       coin="BTC" 
-      img= {require('./btc.png')}  
+      img="https://www.svgrepo.com/show/507188/bitcoin-circle.svg"
       price={btcData.current_price}  
       hourChange={btcData.price_change_24h} 
       hourHigh={btcData.high_24h} 
@@ -139,7 +139,7 @@ const App = () => {
       <Col lg="auto">
       <CryptoPanel 
       coin="ETH" 
-      img= {require('./eth.png')}  
+      img="https://www.svgrepo.com/show/341796/ethereum.svg"
       price={ethData.current_price} 
       hourChange={ethData.price_change_24h}
       hourHigh={ethData.high_24h}
